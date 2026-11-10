@@ -1,31 +1,35 @@
 /* Sciencefolio — theme.js
-   Load in <head> (no defer) so the right theme paints on first frame.
-   - Dark/light: follows the OS until the visitor uses the footer toggle.
-   - ?pack=serif : previews a type pack (remembered for the tab). Handy while
-     choosing; delete the "pack preview" block once you've set data-pack.   */
+   Load in <head> (no defer) so the right look paints on the first frame. */
 (function () {
+
+  /* ---- TYPE PACK: the one setting to change --------------------------------
+     'grotesk' = Archivo + IBM Plex Mono  (lab voice: STEM)
+     'serif'   = Fraunces + Archivo caps  (seminar voice: social science, humanities) */
+  var PACK = 'grotesk';
+
   var root = document.documentElement;
 
-  /* pack preview */
+  /* Try the other pack without editing: add ?pack=serif (or ?pack=grotesk) to
+     any page address. It lasts for the browser tab only. */
   try {
     var q = new URLSearchParams(location.search).get('pack');
-    if (q) sessionStorage.setItem('sf-pack', q);
-    var pack = sessionStorage.getItem('sf-pack');
-    if (pack === 'serif' || pack === 'grotesk') root.dataset.pack = pack === 'serif' ? 'serif' : '';
+    if (q === 'serif' || q === 'grotesk') sessionStorage.setItem('sf-pack', q);
+    PACK = sessionStorage.getItem('sf-pack') || PACK;
   } catch (e) {}
+  if (PACK === 'serif') root.dataset.pack = 'serif';
 
-  /* theme */
+  /* ---- DARK / LIGHT: follows the visitor's system until they use the toggle */
   var saved = null;
   try { saved = localStorage.getItem('sf-theme'); } catch (e) {}
-  var theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  root.dataset.theme = theme;
+  root.dataset.theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
   document.addEventListener('DOMContentLoaded', function () {
     var btn = document.querySelector('[data-theme-toggle]');
     if (!btn) return;
+    var label = btn.querySelector('[data-theme-label]') || btn;
     function paint() {
       var dark = root.dataset.theme === 'dark';
-      btn.textContent = dark ? '◐ Light' : '◐ Dark';
+      label.textContent = dark ? 'Light' : 'Dark';
       btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
     }
     paint();

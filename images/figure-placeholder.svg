@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Figure placeholder">
+  <defs>
+    <pattern id="h" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="24" height="24" fill="#e8e6e1"/>
+      <rect width="12" height="24" fill="#dedcd6"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#h)"/>
+  <text x="400" y="231" text-anchor="middle" font-family="ui-monospace, monospace" font-size="18" letter-spacing="3" fill="#201e1d">YOUR FIGURE</text>
+</svg>

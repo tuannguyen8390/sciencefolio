@@ -16,6 +16,8 @@
 <body>
 
 <nav class="nav" aria-label="Main">
+  <!-- EDIT: your name; links back to the home page -->
+  <a class="nav-name" href="index.html">Alex Morgan</a>
   <a href="about.html">About</a>
   <a href="research.html" aria-current="page">Research</a>
   <a href="work.html">Work</a>
@@ -29,40 +31,54 @@
   </header>
 
   <!-- ============ PROJECTS ============ -->
-  <section class="section flush-top" aria-label="Projects">
+  <section class="section flush-top" aria-label="Research areas">
     <div class="wrap">
-      <!-- Each .card is one project. Copy a block to add one; an odd count leaves an empty cell, so aim for even. -->
-      <div class="grid2">
-        <article class="card">
-          <span class="num">(01)</span>
-          <h3>Project or research area one</h3>
-          <p>Two or three sentences: the question, the approach, and what you found or expect to find.</p>
+      <!-- Each .chapter is one area or project. Copy a block to add one; any number works. -->
+      <div class="chapters">
+        <article class="chapter">
+          <!-- Optional figure: a plot, photo, diagram or screenshot. Delete the <figure> block to go text-only. -->
+          <figure class="figure">
+            <img src="images/figure-placeholder.svg" alt="" width="800" height="450">
+            <figcaption>Figure 1. One-line caption saying what the reader is looking at.</figcaption>
+          </figure>
+          <p class="when">Area one · 2022 – now</p>
+          <h2>Project or research area one</h2>
+          <p>Two or three sentences: the question you ask, the approach you take, and what you found or expect to find.</p>
           <div class="tags"><span class="tag">Method</span><span class="tag">Topic</span></div>
+          <div class="links"><a href="work.html">Paper</a><a href="https://github.com/">Code</a></div>
         </article>
-        <article class="card">
-          <span class="num">(02)</span>
-          <h3>Project or research area two</h3>
-          <p>Two or three sentences: the question, the approach, and what you found or expect to find.</p>
+
+        <article class="chapter">
+          <!-- Optional figure: a plot, photo, diagram or screenshot. Delete the <figure> block to go text-only. -->
+          <figure class="figure">
+            <img src="images/figure-placeholder.svg" alt="" width="800" height="450">
+            <figcaption>Figure 2. One-line caption saying what the reader is looking at.</figcaption>
+          </figure>
+          <p class="when">Area two · 2020 – 2022</p>
+          <h2>Project or research area two</h2>
+          <p>Two or three sentences: the question you ask, the approach you take, and what you found or expect to find.</p>
           <div class="tags"><span class="tag">Method</span><span class="tag">Topic</span></div>
+          <div class="links"><a href="work.html">Paper</a><a href="https://example.com/">Data</a></div>
         </article>
-        <article class="card">
-          <span class="num">(03)</span>
-          <h3>Project or research area three</h3>
-          <p>Two or three sentences: the question, the approach, and what you found or expect to find.</p>
+
+        <article class="chapter">
+          <!-- Optional figure: a plot, photo, diagram or screenshot. Delete the <figure> block to go text-only. -->
+          <figure class="figure">
+            <img src="images/figure-placeholder.svg" alt="" width="800" height="450">
+            <figcaption>Figure 3. One-line caption saying what the reader is looking at.</figcaption>
+          </figure>
+          <p class="when">Area three · 2018 – 2020</p>
+          <h2>Project or research area three</h2>
+          <p>Two or three sentences: the question you ask, the approach you take, and what you found or expect to find.</p>
           <div class="tags"><span class="tag">Method</span><span class="tag">Topic</span></div>
-        </article>
-        <article class="card">
-          <span class="num">(04)</span>
-          <h3>Project or research area four</h3>
-          <p>Two or three sentences: the question, the approach, and what you found or expect to find.</p>
-          <div class="tags"><span class="tag">Method</span><span class="tag">Topic</span></div>
+          <div class="links"><a href="work.html">Paper</a></div>
         </article>
       </div>
     </div>
   </section>
 
   <!-- ============ METHODS & TOOLS ============ -->
-  <section class="section" aria-labelledby="tools-h">
+  <section class="section tint" aria-labelledby="tools-h">
     <div class="wrap" style="text-align:center">
       <div class="section-head" style="margin-bottom:24px">
         <h2 id="tools-h">Methods &amp; tools</h2>
@@ -93,7 +109,7 @@
 
 <footer class="foot">
   <a href="index.html">© 2026 Alex Morgan</a>
-  <button type="button" class="toggle" data-theme-toggle aria-pressed="false">◐ Dark</button>
+  <button type="button" class="toggle" data-theme-toggle aria-pressed="false"><svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 1.5a6.5 6.5 0 0 0 0 13z" fill="currentColor"/></svg><span data-theme-label>Dark</span></button>
   <a href="https://github.com/tuannguyen8390/sciencefolio" rel="noopener">Built with Sciencefolio</a>
 </footer>
 

@@ -1,7 +1,7 @@
 /* ==========================================================================
    SCIENCEFOLIO — tokens.css
    The only file most people need to edit. Three decisions:
-   1) TYPE PACK   → set <html data-pack="serif"> in each page (default = grotesk)
+   1) TYPE PACK   → set PACK in js/theme.js ('grotesk' default, or 'serif')
    2) ACCENT      → uncomment one line below (or write your own hex)
    3) COLORS      → paper / ink, if you want a different neutral
    ========================================================================== */
@@ -28,9 +28,13 @@
   --font-body: 'Archivo', system-ui, sans-serif;
   --font-label: 'IBM Plex Mono', ui-monospace, monospace;
   --font-statement: var(--font-body);
-  --display-weight: 800;
+  --display-weight: 800;      /* name and page titles */
   --display-tracking: -0.04em;
   --display-leading: 0.95;
+  --head-weight: 700;         /* section headings */
+  --head-tracking: -0.03em;
+  --title-weight: 600;        /* entry, column and chapter titles */
+  --title-tracking: -0.015em;
   --emph-weight: 700;
   --emph-style: normal;
   --label-transform: none;
@@ -44,7 +48,7 @@
 }
 
 /* ---- 1) TYPE PACK 02 · SERIF (social science & humanities) -------------
-   Activate with <html data-pack="serif">                                   */
+   Activate by setting PACK = 'serif' in js/theme.js                       */
 html[data-pack="serif"] {
   --font-display: 'Fraunces', Georgia, serif;
   --font-statement: 'Fraunces', Georgia, serif;
@@ -52,6 +56,10 @@ html[data-pack="serif"] {
   --display-weight: 600;
   --display-tracking: -0.015em;
   --display-leading: 1;
+  --head-weight: 600;
+  --head-tracking: -0.015em;
+  --title-weight: 500;
+  --title-tracking: -0.005em;
   --emph-weight: 600;
   --emph-style: italic;
   --label-transform: uppercase;

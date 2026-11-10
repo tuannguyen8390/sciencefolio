@@ -19,6 +19,8 @@
 <body>
 
 <nav class="nav" aria-label="Main">
+  <!-- EDIT: your name; links back to the home page -->
+  <a class="nav-name" href="index.html">Alex Morgan</a>
   <a href="about.html">About</a>
   <a href="research.html">Research</a>
   <a href="work.html" aria-current="page">Work</a>
@@ -44,97 +46,58 @@
         <button type="button" class="filter" data-filter="talk" aria-pressed="false">Talks</button>
       </div>
 
-      <!-- One .year-group per year; one .pub per entry. Everything except the title is optional —
-           drop the authors line, the venue line, the tags, or any link you don't have. -->
-      <div class="year-group">
-        <h3>2025</h3>
-
-        <!-- A paper -->
-        <article class="pub" data-type="paper">
-          <div>
-            <h4><a href="https://doi.org/">Title of your most recent paper goes here</a></h4>
-            <p class="authors"><strong>A. Morgan</strong>, B. Collaborator, C. Collaborator</p>
-            <p>Journal Name, 12(3): 456–478</p>
-          </div>
-          <div class="side">
-            <span class="tag">Journal</span>
-            <span class="links"><a href="https://doi.org/">DOI</a><a href="files/placeholder.pdf">PDF</a><a href="https://github.com/">Code</a></span>
-          </div>
+      <!-- One .year-group per year; one .entry per item. Only the title is required: drop the authors line,
+           the description, the tags or any link you don't have. The first line ("Journal · Name") is the type and venue.
+           Papers/preprints use data-type="paper"; theses and course/lab/personal work use "project". -->
+      <section class="year-group" aria-labelledby="y2025">
+        <h2 class="year" id="y2025">2025</h2>
+        <article class="entry" data-type="paper">
+          <p class="when">Journal · Journal Name, 12(3): 456–478</p>
+          <h3><a href="https://doi.org/">Title of your most recent paper goes here</a></h3>
+          <p class="authors"><strong>A. Morgan</strong>, B. Collaborator, C. Collaborator</p>
+          <div class="links"><a href="https://doi.org/">DOI</a><a href="files/placeholder.pdf">PDF</a><a href="https://github.com/">Code</a></div>
         </article>
-
-        <!-- A project (no authors, no venue needed — a sentence and the tools you used is plenty) -->
-        <article class="pub" data-type="project">
-          <div>
-            <h4><a href="https://github.com/">Name of a project you built or ran</a></h4>
-            <p>One or two sentences: what problem it tackled, what you did, what came out of it. Course, lab or personal project — say which.</p>
-            <div class="tags"><span class="tag">Tool</span><span class="tag">Method</span><span class="tag">Language</span></div>
-          </div>
-          <div class="side">
-            <span class="tag">Project</span>
-            <span class="links"><a href="files/placeholder.pdf">Report</a><a href="https://github.com/">Code</a><a href="https://example.com/">Demo</a></span>
-          </div>
+        <article class="entry" data-type="project">
+          <p class="when">Project · Course, lab or personal</p>
+          <h3><a href="https://github.com/">Name of a project you built or ran</a></h3>
+          <p>One or two sentences: what problem it tackled, what you did, what came out of it.</p>
+          <div class="tags"><span class="tag">Tool</span><span class="tag">Method</span><span class="tag">Language</span></div>
+          <div class="links"><a href="files/placeholder.pdf">Report</a><a href="https://github.com/">Code</a><a href="https://example.com/">Demo</a></div>
         </article>
-      </div>
+      </section>
 
-      <div class="year-group">
-        <h3>2024</h3>
-
-        <!-- A thesis counts as a project -->
-        <article class="pub" data-type="project">
-          <div>
-            <h4><a href="files/placeholder.pdf">Title of your thesis or capstone</a></h4>
-            <p class="authors">Supervised by Prof. Name · University name</p>
-            <p>One-sentence summary of the question and the main result.</p>
-          </div>
-          <div class="side">
-            <span class="tag">Thesis</span>
-            <span class="links"><a href="files/placeholder.pdf">PDF</a></span>
-          </div>
+      <section class="year-group" aria-labelledby="y2024">
+        <h2 class="year" id="y2024">2024</h2>
+        <article class="entry" data-type="project">
+          <p class="when">Thesis · University name</p>
+          <h3><a href="files/placeholder.pdf">Title of your thesis or capstone</a></h3>
+          <p class="authors">Supervised by Prof. Name</p>
+          <p>One-sentence summary of the question and the main result.</p>
+          <div class="links"><a href="files/placeholder.pdf">PDF</a></div>
         </article>
-
-        <!-- A poster -->
-        <article class="pub" data-type="poster">
-          <div>
-            <h4>Title of a poster you presented</h4>
-            <p class="authors"><strong>A. Morgan</strong>, B. Collaborator</p>
-            <p>Conference or symposium name, City</p>
-          </div>
-          <div class="side">
-            <span class="tag">Poster</span>
-            <span class="links"><a href="files/placeholder.pdf">PDF</a></span>
-          </div>
+        <article class="entry" data-type="poster">
+          <p class="when">Poster · Conference or symposium name, City</p>
+          <h3>Title of a poster you presented</h3>
+          <p class="authors"><strong>A. Morgan</strong>, B. Collaborator</p>
+          <div class="links"><a href="files/placeholder.pdf">PDF</a></div>
         </article>
-      </div>
+      </section>
 
-      <div class="year-group">
-        <h3>2023</h3>
-
-        <!-- A preprint is a paper with a different tag -->
-        <article class="pub" data-type="paper">
-          <div>
-            <h4><a href="https://arxiv.org/">Title of a preprint you want people to read</a></h4>
-            <p class="authors"><strong>A. Morgan</strong>, C. Collaborator</p>
-            <p>arXiv / bioRxiv / SSRN · preprint</p>
-          </div>
-          <div class="side">
-            <span class="tag">Preprint</span>
-            <span class="links"><a href="https://arxiv.org/">Preprint</a></span>
-          </div>
+      <section class="year-group" aria-labelledby="y2023">
+        <h2 class="year" id="y2023">2023</h2>
+        <article class="entry" data-type="paper">
+          <p class="when">Preprint · arXiv / bioRxiv / SSRN</p>
+          <h3><a href="https://arxiv.org/">Title of a preprint you want people to read</a></h3>
+          <p class="authors"><strong>A. Morgan</strong>, C. Collaborator</p>
+          <div class="links"><a href="https://arxiv.org/">Preprint</a></div>
         </article>
-
-        <!-- A talk -->
-        <article class="pub" data-type="talk">
-          <div>
-            <h4>Title of a talk or lightning talk</h4>
-            <p class="authors"><strong>A. Morgan</strong></p>
-            <p>Event name, City</p>
-          </div>
-          <div class="side">
-            <span class="tag">Talk</span>
-            <span class="links"><a href="files/placeholder.pdf">Slides</a></span>
-          </div>
+        <article class="entry" data-type="talk">
+          <p class="when">Talk · Event name, City</p>
+          <h3>Title of a talk or lightning talk</h3>
+          <p class="authors"><strong>A. Morgan</strong></p>
+          <div class="links"><a href="files/placeholder.pdf">Slides</a></div>
         </article>
-      </div>
+      </section>
 
     </div>
   </section>
@@ -142,7 +105,7 @@
 
 <footer class="foot">
   <a href="index.html">© 2026 Alex Morgan</a>
-  <button type="button" class="toggle" data-theme-toggle aria-pressed="false">◐ Dark</button>
+  <button type="button" class="toggle" data-theme-toggle aria-pressed="false"><svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 1.5a6.5 6.5 0 0 0 0 13z" fill="currentColor"/></svg><span data-theme-label>Dark</span></button>
   <a href="https://github.com/tuannguyen8390/sciencefolio" rel="noopener">Built with Sciencefolio</a>
 </footer>
 
