@@ -12,7 +12,7 @@ A minimal, centered, no-build academic homepage. Four pages of plain HTML, one t
 4. **Name the Work page for who you are.** It ships as **Work**, a neutral list that takes papers, preprints, projects, theses, posters and talks. Researchers: rename it **Publications**. Students and early-career people: rename it **Projects** — no publications needed, every entry is just a title plus whatever you have (a sentence, tools, a Report / Code / Demo link). To rename, change the nav link on all four pages, the `<h1>` and `<title>` in `work.html`, and delete any filter buttons you don't need.
 5. **Fill in the strings.** Search each page for `EDIT` comments. On the home page that's six things: photo, name, field · place, one statement sentence, profile links, and the contact email.
 6. **Add your content** — projects in `research.html`, entries in `work.html`, bio in `about.html`. Copy an existing block to add more.
-7. Put your CV in `files/cv.pdf` and your portrait in `images/` (replace `portrait-placeholder.svg`, or delete the `<figure>` to go type-only).
+7. Replace the stand-in `files/cv.pdf` with your CV and your portrait in `images/` (replace `portrait-placeholder.svg`, or delete the `<figure>` to go type-only).
 
 ## Structure
 
@@ -23,7 +23,7 @@ css/site.css     ← layout and components; rarely needs touching
 js/theme.js      ← dark/light toggle + ?pack= preview (load in <head>)
 js/filter.js     ← Work-page filter (work.html only)
 images/          ← portrait + favicon
-files/           ← your CV and PDFs (create this folder)
+files/           ← your CV and PDFs (cv.pdf and placeholder.pdf are stand-ins; replace them)
 ```
 
 ## Design notes
