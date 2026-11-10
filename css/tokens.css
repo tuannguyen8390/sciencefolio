@@ -1,0 +1,67 @@
+/* ==========================================================================
+   SCIENCEFOLIO — tokens.css
+   The only file most people need to edit. Three decisions:
+   1) TYPE PACK   → set <html data-pack="serif"> in each page (default = grotesk)
+   2) ACCENT      → uncomment one line below (or write your own hex)
+   3) COLORS      → paper / ink, if you want a different neutral
+   ========================================================================== */
+
+:root {
+  /* ---- neutrals ------------------------------------------------------- */
+  --paper: #f3f2f2;
+  --ink: #201e1d;
+  --surface: #eceae4;
+
+  /* ---- 2) ACCENT ------------------------------------------------------
+     Ships as plain ink: no color, no shared brand. Pick one (light + dark
+     values; the dark one needs to be lighter so it stays readable).        */
+  --accent-light: #201e1d;
+  --accent-dark: #f3f2f2;
+  /* --accent-light: #2545d3;  --accent-dark: #8aa2ff;   cobalt  */
+  /* --accent-light: #1e6f50;  --accent-dark: #6fd1a8;   forest  */
+  /* --accent-light: #b4552d;  --accent-dark: #f0a07c;   rust    */
+  /* --accent-light: #6d28d9;  --accent-dark: #b99bff;   violet  */
+  --accent: var(--accent-light);
+
+  /* ---- 1) TYPE PACK 01 · GROTESK (default, STEM) ---------------------- */
+  --font-display: 'Archivo', system-ui, sans-serif;
+  --font-body: 'Archivo', system-ui, sans-serif;
+  --font-label: 'IBM Plex Mono', ui-monospace, monospace;
+  --font-statement: var(--font-body);
+  --display-weight: 800;
+  --display-tracking: -0.04em;
+  --display-leading: 0.95;
+  --emph-weight: 700;
+  --emph-style: normal;
+  --label-transform: none;
+  --label-tracking: 0.04em;
+
+  /* ---- layout --------------------------------------------------------- */
+  --rule: 2px solid var(--ink);
+  --edge: clamp(20px, 5vw, 56px);
+  --wide: 960px;
+  --measure: 64ch;
+}
+
+/* ---- 1) TYPE PACK 02 · SERIF (social science & humanities) -------------
+   Activate with <html data-pack="serif">                                   */
+html[data-pack="serif"] {
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-statement: 'Fraunces', Georgia, serif;
+  --font-label: 'Archivo', system-ui, sans-serif;
+  --display-weight: 600;
+  --display-tracking: -0.015em;
+  --display-leading: 1;
+  --emph-weight: 600;
+  --emph-style: italic;
+  --label-transform: uppercase;
+  --label-tracking: 0.1em;
+}
+
+/* ---- dark mode (toggle in the footer) ---------------------------------- */
+html[data-theme="dark"] {
+  --paper: #141312;
+  --ink: #f3f2f2;
+  --surface: #1d1b19;
+  --accent: var(--accent-dark);
+}

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- LABEL: "Work" is the neutral default. Researchers: rename to "Publications". Students: "Projects".
+     Change it in the nav link on all four pages, the <h1> below, and this <title>. -->
+<title>Work · Alex Morgan</title>
+<meta name="description" content="Papers, projects, posters and talks by Alex Morgan.">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600;700;800&family=IBM+Plex+Mono:wght@400;600&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+<script src="js/theme.js"></script>
+<script src="js/filter.js" defer></script>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <a href="about.html">About</a>
+  <a href="research.html">Research</a>
+  <a href="work.html" aria-current="page">Work</a>
+</nav>
+
+<main>
+  <header class="page-head">
+    <h1>Work</h1>
+    <hr class="short-rule">
+    <!-- EDIT: one line on how to read this page. Students: say what these projects were for (course, lab, thesis, side project). -->
+    <p>Papers, projects, posters and talks — the things I've made and presented.</p>
+  </header>
+
+  <section class="section flush-top" aria-label="Work list">
+    <div class="wrap">
+
+      <!-- Filters: each button's data-filter matches an entry's data-type. Delete buttons you don't need (e.g. Papers, if you have none yet). -->
+      <div class="filters" role="group" aria-label="Filter by type">
+        <button type="button" class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="filter" data-filter="paper" aria-pressed="false">Papers</button>
+        <button type="button" class="filter" data-filter="project" aria-pressed="false">Projects</button>
+        <button type="button" class="filter" data-filter="poster" aria-pressed="false">Posters</button>
+        <button type="button" class="filter" data-filter="talk" aria-pressed="false">Talks</button>
+      </div>
+
+      <!-- One .year-group per year; one .pub per entry. Everything except the title is optional —
+           drop the authors line, the venue line, the tags, or any link you don't have. -->
+      <div class="year-group">
+        <h3>2025</h3>
+
+        <!-- A paper -->
+        <article class="pub" data-type="paper">
+          <div>
+            <h4><a href="https://doi.org/">Title of your most recent paper goes here</a></h4>
+            <p class="authors"><strong>A. Morgan</strong>, B. Collaborator, C. Collaborator</p>
+            <p>Journal Name, 12(3): 456–478</p>
+          </div>
+          <div class="side">
+            <span class="tag">Journal</span>
+            <span class="links"><a href="https://doi.org/">DOI</a><a href="files/paper.pdf">PDF</a><a href="https://github.com/">Code</a></span>
+          </div>
+        </article>
+
+        <!-- A project (no authors, no venue needed — a sentence and the tools you used is plenty) -->
+        <article class="pub" data-type="project">
+          <div>
+            <h4><a href="https://github.com/">Name of a project you built or ran</a></h4>
+            <p>One or two sentences: what problem it tackled, what you did, what came out of it. Course, lab or personal project — say which.</p>
+            <div class="tags"><span class="tag">Tool</span><span class="tag">Method</span><span class="tag">Language</span></div>
+          </div>
+          <div class="side">
+            <span class="tag">Project</span>
+            <span class="links"><a href="files/report.pdf">Report</a><a href="https://github.com/">Code</a><a href="https://example.com/">Demo</a></span>
+          </div>
+        </article>
+      </div>
+
+      <div class="year-group">
+        <h3>2024</h3>
+
+        <!-- A thesis counts as a project -->
+        <article class="pub" data-type="project">
+          <div>
+            <h4><a href="files/thesis.pdf">Title of your thesis or capstone</a></h4>
+            <p class="authors">Supervised by Prof. Name · University name</p>
+            <p>One-sentence summary of the question and the main result.</p>
+          </div>
+          <div class="side">
+            <span class="tag">Thesis</span>
+            <span class="links"><a href="files/thesis.pdf">PDF</a></span>
+          </div>
+        </article>
+
+        <!-- A poster -->
+        <article class="pub" data-type="poster">
+          <div>
+            <h4>Title of a poster you presented</h4>
+            <p class="authors"><strong>A. Morgan</strong>, B. Collaborator</p>
+            <p>Conference or symposium name, City</p>
+          </div>
+          <div class="side">
+            <span class="tag">Poster</span>
+            <span class="links"><a href="files/poster.pdf">PDF</a></span>
+          </div>
+        </article>
+      </div>
+
+      <div class="year-group">
+        <h3>2023</h3>
+
+        <!-- A preprint is a paper with a different tag -->
+        <article class="pub" data-type="paper">
+          <div>
+            <h4><a href="https://arxiv.org/">Title of a preprint you want people to read</a></h4>
+            <p class="authors"><strong>A. Morgan</strong>, C. Collaborator</p>
+            <p>arXiv / bioRxiv / SSRN · preprint</p>
+          </div>
+          <div class="side">
+            <span class="tag">Preprint</span>
+            <span class="links"><a href="https://arxiv.org/">Preprint</a></span>
+          </div>
+        </article>
+
+        <!-- A talk -->
+        <article class="pub" data-type="talk">
+          <div>
+            <h4>Title of a talk or lightning talk</h4>
+            <p class="authors"><strong>A. Morgan</strong></p>
+            <p>Event name, City</p>
+          </div>
+          <div class="side">
+            <span class="tag">Talk</span>
+            <span class="links"><a href="files/slides.pdf">Slides</a></span>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <a href="index.html">© 2026 Alex Morgan</a>
+  <button type="button" class="toggle" data-theme-toggle aria-pressed="false">◐ Dark</button>
+  <a href="https://github.com/tuannguyen8390/sciencefolio" rel="noopener">Built with Sciencefolio</a>
+</footer>
+
+</body>
+</html>
